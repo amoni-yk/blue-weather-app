@@ -1,0 +1,43 @@
+a {
+  color: #5585b5;
+  text-decoration: none;
+}
+
+.container.main {
+  font-family: "Roboto Mono", monospace;
+  background: #d5def5;
+  border: 1px solid #8594e4;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 50px;
+}
+.form-control {
+  border-radius: 50px;
+}
+.city-info {
+  list-style-type: none;
+  text-align: right;
+}
+#city {
+  color: #000000;
+  font-size: 38px;
+  font-weight: 500;
+}
+.emoji {
+  font-size: 70px;
+}
+#description {
+  text-transform: capitalize;
+}
+.weather-properties {
+  list-style-type: none;
+  text-align: start;
+}
+.temperature {
+  font-size: 30px;
+  font-weight: bold;
+}
+.units {
+  font-size: 26px;
+  font-weight: bold;
+}
