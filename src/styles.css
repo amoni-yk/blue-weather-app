@@ -1,17 +1,14 @@
 a {
-  color: #5585b5;
-  text-decoration: none;
 }
-
 .container.main {
   font-family: "Roboto Mono", monospace;
   background: #d5def5;
   border: 1px solid #8594e4;
   border-radius: 10px;
   padding: 30px;
-  margin: 50px;
+  margin: 50px 50px 5px 50px;
 }
-.form-control {
+#city-input {
   border-radius: 50px;
 }
 .city-info {
@@ -40,4 +37,19 @@ a {
 .units {
   font-size: 26px;
   font-weight: bold;
+}
+#celsius-link,
+#farenheit-link,
+#source-code {
+  color: #5585b5;
+  text-decoration: none;
+}
+#celsius-link:hover,
+#farenheit-link:hover,
+#source-code:hover {
+  transition: all 100ms ease-in-out;
+  color: rgb(10, 88, 202);
+}
+.creator {
+  padding-left: 50px;
 }
