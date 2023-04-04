@@ -1,3 +1,6 @@
+body {
+  background: #893168;
+}
 .container.main {
   font-family: "Roboto Mono", monospace;
   background: #bbabf892;
@@ -31,6 +34,14 @@
 }
 .creator {
   padding-left: 50px;
+}
+#button {
+  border-radius: 50px;
+  border-color: #a386b2;
+  background-color: #a386b2;
+}
+#button:hover {
+  background-color: #716580;
 }
 #city-input {
   border-radius: 50px;

@@ -31,7 +31,6 @@ function formatDay(timestamp) {
 }
 
 function displayForecast(response) {
-  console.log(response.data.daily);
   let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class = "row">`;
@@ -65,13 +64,7 @@ function displayForecast(response) {
   console.log(forecastHTML);
 }
 
-function locationButton(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(getForecast);
-}
-
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = `a6adb5d48c378f39061072to170cddc8`;
   let api_URL = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
   axios.get(`${api_URL}`).then(displayForecast);
@@ -87,7 +80,6 @@ function showTemperature(response) {
   let weatherIcon = document.querySelector(`#city-icon`);
 
   celsiusTemperature = response.data.temperature.current;
-  console.log(response);
 
   temperature.innerHTML = Math.round(celsiusTemperature);
   city.innerHTML = response.data.city;
@@ -116,11 +108,9 @@ function searchBar(event) {
   cityName.innerHTML = `${city}`;
   getCityWeather(city);
 }
+
 let search = document.querySelector("#search-engine");
 search.addEventListener("submit", searchBar);
-
-let currentLocationButton = document.querySelector("#location");
-currentLocationButton.addEventListener("click", locationButton);
 
 function showFahrenheitTemp(event) {
   event.preventDefault();
